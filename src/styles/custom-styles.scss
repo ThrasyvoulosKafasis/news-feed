@@ -1,0 +1,128 @@
+/***** Variables *****/
+
+$header_bg_color: #254a74;
+$avatar_color: #4a90e2;
+$gray: #c9c9c9;
+$bg_gray: #f4f4f4;
+
+/***** General *****/
+
+.application--wrap {
+    background-color: $bg_gray;
+}
+
+/***** Header *****/
+
+#header {
+    .v-toolbar {
+        background-color: $header_bg_color !important;
+
+        .v-avatar {
+            background-color: $avatar_color;
+            border: 2px solid $gray;
+        }
+
+        #user_initials {
+            color: $gray;
+        }
+    }
+
+    #profile_layer {
+        position: absolute;
+        top: 220px;
+        left: 250px;
+        display: flex;
+    
+        #profile_img {
+          border: 1px solid $gray;
+          border-radius: 4px;
+    
+          img {
+            height: 160px;
+            border: 8px solid white;
+          }
+        }
+    
+        #profile_name {
+          font-size: 22px;
+          color: white;
+          margin-left: 30px;
+          margin-top: 75px;
+          letter-spacing: 3px;
+        }
+    }
+}
+
+.v-menu__content.header_menu {
+    margin-top: 20px;
+  
+    .v-list {
+      .v-list__tile--link, v-list__tile--highlighted, v-list__group__header {
+        &:hover {
+          background-color: $gray;
+        }
+      }
+    }
+}
+
+/***** Footer *****/
+
+.v-footer {
+    background-color: $bg_gray !important;
+  
+    .container {
+      padding-top: 12px;
+      padding-bottom: 12px;
+  
+      .layout {
+        justify-content: space-between;
+        align-items: center;
+  
+        .item {
+          color: $gray;
+  
+          .v-btn {
+            text-transform: none;
+            min-width: 0;
+            padding: 0;
+            margin: 0;
+            color: $gray !important;
+            font-weight: 400;
+  
+            &:hover {
+              background: transparent;
+            }
+          }
+  
+          span {
+            margin: 0 4px;
+          }
+        }
+      }
+    }
+}
+
+/***** Main Page *****/
+
+#main_page {
+    #pagination_layer {
+      margin-top: 30px;
+
+      .item {
+        width: auto;
+        display: inline-block;
+  
+        .v-text-field {
+          min-width: 50px;
+          margin-right: 8px;
+          max-width: 75px;
+        }
+      }
+    }
+
+    .v-card{
+      .v-card__subtitle{
+        height: 170px;
+      }
+    }
+}
